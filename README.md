@@ -1,0 +1,51 @@
+# CarSystem
+This is a car system project
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* Inline CSS for styling */
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .car {
+            width: 200px;
+            margin: 0 auto;
+            text-align: center;
+            padding: 20px;
+            border: 2px solid #000;
+            border-radius: 10px;
+        }
+        .status {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="car">
+        <h1>Car System</h1>
+        <p>Car Status: <span class="status" id="carStatus">Off</span></p>
+        <button onclick="startEngine()">Start Engine</button>
+        <button onclick="stopEngine()">Stop Engine</button>
+    </div>
+
+    <script>
+        // JavaScript for the car system
+        let engineStatus = false;
+
+        function startEngine() {
+            if (!engineStatus) {
+                engineStatus = true;
+                document.getElementById('carStatus').textContent = 'On';
+            }
+        }
+
+        function stopEngine() {
+            if (engineStatus) {
+                engineStatus = false;
+                document.getElementById('carStatus').textContent = 'Off';
+            }
+        }
+    </script>
+</body>
+</html>
